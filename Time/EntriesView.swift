@@ -9,11 +9,11 @@ struct EntriesView: View {
     
     var body: some View {
         List {
-            ForEach(entries) { scrum in
-                NavigationLink(destination: DetailView(scrum: scrum)) {
-                    CardView(scrum: scrum)
+            ForEach(entries) { entry in
+                NavigationLink(destination: DetailView(scrum: entry)) {
+                    CardView(today: entry)
                 }
-                .listRowBackground(scrum.theme.mainColor)
+                .listRowBackground(entry.theme.mainColor)
             }
         }
         .navigationTitle("Entries")
@@ -21,7 +21,7 @@ struct EntriesView: View {
             Button(action: {print("Button Clicked")}) {
                 Image(systemName: "plus")
             }
-            .accessibilityLabel("New Entry")
+            .accessibilityLabel("Add New Entry")
         }
     }
 }
