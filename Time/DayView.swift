@@ -14,7 +14,6 @@ struct DayView: View {
     
     var body: some View {
         VStack {
-            
             Spacer().frame(height: 150.0)
             Text("Time spent today")
                 .font(.headline)

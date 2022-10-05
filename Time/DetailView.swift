@@ -5,15 +5,15 @@ See LICENSE folder for this sample’s licensing information.
 import SwiftUI
 
 struct DetailView: View {
-    @Binding var scrum: DailyScrum
+    var scrum: Today
     
-    @State private var data = DailyScrum.Data()
+    @State private var data = Today.Data()
     @State private var isPresentingEditView = false
     
     var body: some View {
         List {
             Section(header: Text("Meeting Info")) {
-                NavigationLink(destination: MeetingView(scrum: $scrum)) {
+                NavigationLink(destination: Text("Text")) {
                     Label("Start Meeting", systemImage: "timer")
                         .font(.headline)
                         .foregroundColor(.accentColor)
@@ -21,7 +21,7 @@ struct DetailView: View {
                 HStack {
                     Label("Length", systemImage: "clock")
                     Spacer()
-                    Text("\(scrum.lengthInMinutes) minutes")
+                    Text("\(10) minutes")
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
@@ -35,26 +35,8 @@ struct DetailView: View {
                 }
                 .accessibilityElement(children: .combine)
             }
-            Section(header: Text("Attendees")) {
-                ForEach(scrum.attendees) { attendee in
-                    Label(attendee.name, systemImage: "person")
-                }
-            }
-            Section(header: Text("History")) {
-                if scrum.history.isEmpty {
-                    Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
-                }
-                ForEach(scrum.history) { history in
-                    NavigationLink(destination: HistoryView(history: history)) {
-                        HStack {
-                            Image(systemName: "calendar")
-                            Text(history.date, style: .date)
-                        }
-                    }
-                }
-            }
         }
-        .navigationTitle(scrum.title)
+        .navigationTitle(scrum.mood)
         .toolbar {
             Button("Edit") {
                 isPresentingEditView = true
@@ -64,7 +46,7 @@ struct DetailView: View {
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
                 DetailEditView(data: $data)
-                    .navigationTitle(scrum.title)
+                    .navigationTitle(scrum.mood)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
@@ -73,8 +55,8 @@ struct DetailView: View {
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
-                                isPresentingEditView = false
-                                scrum.update(from: data)
+//                                isPresentingEditView = false
+//                                scrum.update(from: data)
                             }
                         }
                     }
@@ -86,7 +68,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(scrum: .constant(DailyScrum.sampleData[0]))
+            DetailView(scrum: Today.sampleData[0])
         }
     }
 }
