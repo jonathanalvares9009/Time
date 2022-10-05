@@ -12,16 +12,15 @@ struct Time: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                Text("Hello World")
-//                ScrumsView(scrums: $store.scrums) {
-//                    Task {
-//                        do {
-//                            try await ScrumStore.save(scrums: store.scrums)
-//                        } catch {
-//                            errorWrapper = ErrorWrapper(error: error, guidance: "Try again later.")
-//                        }
-//                    }
-//                }
+                ScrumsView(scrums: $store.scrums) {
+                    Task {
+                        do {
+                            try await ScrumStore.save(scrums: store.scrums)
+                        } catch {
+                            errorWrapper = ErrorWrapper(error: error, guidance: "Try again later.")
+                        }
+                    }
+                }
             }
             .task {
                 do {

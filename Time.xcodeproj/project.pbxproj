@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7CB413DF26EA824100544BA7 /* ScrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB413DE26EA824100544BA7 /* ScrumdingerApp.swift */; };
+		7CB413DF26EA824100544BA7 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB413DE26EA824100544BA7 /* Time.swift */; };
 		7CB413E126EA824100544BA7 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB413E026EA824100544BA7 /* MeetingView.swift */; };
 		7CB413E326EA824300544BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB413E226EA824300544BA7 /* Assets.xcassets */; };
 		7CB413E626EA824300544BA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB413E526EA824300544BA7 /* Preview Assets.xcassets */; };
@@ -38,8 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7CB413DB26EA824100544BA7 /* Scrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CB413DE26EA824100544BA7 /* ScrumdingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumdingerApp.swift; sourceTree = "<group>"; };
+		7CB413DB26EA824100544BA7 /* Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Time.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB413DE26EA824100544BA7 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		7CB413E026EA824100544BA7 /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
 		7CB413E226EA824300544BA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CB413E526EA824300544BA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		7CB413D226EA824100544BA7 = {
 			isa = PBXGroup;
 			children = (
-				7CB413DD26EA824100544BA7 /* Scrumdinger */,
+				7CB413DD26EA824100544BA7 /* Time */,
 				AA0F3C8B2720961A00945F09 /* Configuration */,
 				7CB413DC26EA824100544BA7 /* Products */,
 			);
@@ -92,16 +92,16 @@
 		7CB413DC26EA824100544BA7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7CB413DB26EA824100544BA7 /* Scrumdinger.app */,
+				7CB413DB26EA824100544BA7 /* Time.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7CB413DD26EA824100544BA7 /* Scrumdinger */ = {
+		7CB413DD26EA824100544BA7 /* Time */ = {
 			isa = PBXGroup;
 			children = (
 				7CB413EF26EA97B300544BA7 /* Models */,
-				7CB413DE26EA824100544BA7 /* ScrumdingerApp.swift */,
+				7CB413DE26EA824100544BA7 /* Time.swift */,
 				7CB413F426EAC55200544BA7 /* CardView.swift */,
 				7CB413FC26EBD16900544BA7 /* DetailEditView.swift */,
 				7CB413FA26EBAB0B00544BA7 /* DetailView.swift */,
@@ -121,7 +121,7 @@
 				7CB413E426EA824300544BA7 /* Preview Content */,
 				7CB4140826EBF7AF00544BA7 /* Resources */,
 			);
-			path = Scrumdinger;
+			path = Time;
 			sourceTree = "<group>";
 		};
 		7CB413E426EA824300544BA7 /* Preview Content */ = {
@@ -166,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7CB413DA26EA824100544BA7 /* Scrumdinger */ = {
+		7CB413DA26EA824100544BA7 /* Time */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CB413E926EA824300544BA7 /* Build configuration list for PBXNativeTarget "Scrumdinger" */;
+			buildConfigurationList = 7CB413E926EA824300544BA7 /* Build configuration list for PBXNativeTarget "Time" */;
 			buildPhases = (
 				7CB413D726EA824100544BA7 /* Sources */,
 				7CB413D826EA824100544BA7 /* Frameworks */,
@@ -178,9 +178,9 @@
 			);
 			dependencies = (
 			);
-			name = Scrumdinger;
+			name = Time;
 			productName = Scrumdinger;
-			productReference = 7CB413DB26EA824100544BA7 /* Scrumdinger.app */;
+			productReference = 7CB413DB26EA824100544BA7 /* Time.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +198,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7CB413D626EA824100544BA7 /* Build configuration list for PBXProject "Scrumdinger" */;
+			buildConfigurationList = 7CB413D626EA824100544BA7 /* Build configuration list for PBXProject "Time" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -211,7 +211,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7CB413DA26EA824100544BA7 /* Scrumdinger */,
+				7CB413DA26EA824100544BA7 /* Time */,
 			);
 		};
 /* End PBXProject section */
@@ -254,7 +254,7 @@
 				7CB4140C26EBF93800544BA7 /* AVPlayer+Ding.swift in Sources */,
 				7CC9777426F3F711006053BE /* SpeechRecognizer.swift in Sources */,
 				7CC9776E26F3EBCC006053BE /* ErrorView.swift in Sources */,
-				7CB413DF26EA824100544BA7 /* ScrumdingerApp.swift in Sources */,
+				7CB413DF26EA824100544BA7 /* Time.swift in Sources */,
 				7CB413FF26EBE3DE00544BA7 /* ThemeView.swift in Sources */,
 				7CB413F526EAC55200544BA7 /* CardView.swift in Sources */,
 				7CC9777226F3F478006053BE /* SpeakerArc.swift in Sources */,
@@ -391,7 +391,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Scrumdinger/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Time/Preview Content\"";
+				DEVELOPMENT_TEAM = U37VK69SSK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.";
@@ -407,7 +408,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Scrumdinger";
+				PRODUCT_BUNDLE_IDENTIFIER = "-com.jonathan.Time-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -423,7 +424,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Scrumdinger/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Time/Preview Content\"";
+				DEVELOPMENT_TEAM = U37VK69SSK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.";
@@ -439,7 +441,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Scrumdinger";
+				PRODUCT_BUNDLE_IDENTIFIER = "-com.jonathan.Time-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -450,7 +452,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7CB413D626EA824100544BA7 /* Build configuration list for PBXProject "Scrumdinger" */ = {
+		7CB413D626EA824100544BA7 /* Build configuration list for PBXProject "Time" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CB413E726EA824300544BA7 /* Debug */,
@@ -459,7 +461,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CB413E926EA824300544BA7 /* Build configuration list for PBXNativeTarget "Scrumdinger" */ = {
+		7CB413E926EA824300544BA7 /* Build configuration list for PBXNativeTarget "Time" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CB413EA26EA824300544BA7 /* Debug */,
