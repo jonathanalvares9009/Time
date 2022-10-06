@@ -14,7 +14,7 @@ struct CardView: View {
                 .font(.headline)
             Spacer()
             HStack {
-                Label("\(today.mood)", systemImage: "face.smiling")
+                Label("\(today.mood.rawValue.capitalized)", systemImage: "face.smiling")
                     .accessibilityLabel("Mood today")
                 Spacer()
                 Label("\(Int(today.totalHours)) hours", systemImage: "clock")

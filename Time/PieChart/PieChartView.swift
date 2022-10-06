@@ -102,6 +102,7 @@ public struct PieChartView: View {
             }
             .background(self.backgroundColor)
             .foregroundColor(Color.white)
+            .frame(maxWidth: 500)
         }
     }
 }

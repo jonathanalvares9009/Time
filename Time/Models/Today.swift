@@ -4,18 +4,18 @@ See LICENSE folder for this sample’s licensing information.
 
 import Foundation
 
-struct Today: Identifiable, Codable {
+struct Today: Identifiable {
     let id: UUID
     let date: Date
     var formattedDate: String = ""
-    var mood: String
+    var mood: Mood
     var note: String
     var values: [Double]
     var categories: [String]
     var theme: Theme
     var totalHours: Double = 2
     
-    init(id: UUID = UUID(), date: Date = Date(), mood: String, note: String, values: [Double], categories: [String], theme: Theme = .lavender, totalHours: Double) {
+    init(id: UUID = UUID(), date: Date = Date(), mood: Mood, note: String, values: [Double], categories: [String], theme: Theme = .lavender, totalHours: Double) {
         self.id = id
         self.date = date
         self.mood = mood
@@ -42,7 +42,7 @@ struct Today: Identifiable, Codable {
 
 extension Today {
     struct Data {
-        var mood: String = ""
+        var mood: Mood = Mood.amazing
         var note: String = ""
         var values: [Double] = []
         var categories: [String] = []
@@ -81,8 +81,8 @@ extension Today {
 extension Today {
     static let sampleData: [Today] =
     [
-        Today(mood: "Happy", note: "I love Goa", values: [1, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 10),
-        Today(mood: "Happy", note: "I love Goa", values: [6, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 15),
-        Today(mood: "Happy", note: "I love Goa", values: [1, 5, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 13)
+        Today(mood: Mood.amazing, note: "I love Goa", values: [1, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 10),
+        Today(mood: Mood.good, note: "I love Goa", values: [6, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 15),
+        Today(mood: Mood.fine, note: "I love Goa", values: [1, 5, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 13)
     ]
 }

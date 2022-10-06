@@ -11,6 +11,13 @@ struct DetailEditView: View {
     
     var body: some View {
         Form {
+            Section(header: Text("Mood Today")) {
+                Picker("Mood", selection: $data.mood) {
+                    ForEach(Mood.allCases) { mood in
+                        Text(mood.rawValue.capitalized).tag(mood)
+                    }
+                }
+            }
             Section(header: Text("Note for future me")) {
                 TextField("Write a note", text: $data.note)
             }
@@ -46,7 +53,6 @@ struct DetailEditView: View {
                         withAnimation {
                             let value = Double(newCategoryValue)
                             data.values.append(value ?? 0)
-//                            data.totalHours += Int(newCategoryValue) ?? 0
                             newCategoryValue = ""
                         }
                     }) {

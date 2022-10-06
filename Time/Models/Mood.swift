@@ -7,22 +7,7 @@
 
 import SwiftUI
 
-enum Mood: String, CaseIterable, Identifiable, Codable {
-    case amazing
-    case good
-    case fine
-    case not_good
-    case terrible
-    
-    var name: String {
-        rawValue.capitalized
-    }
-    
-    var id: String {
-        name
-    }
-}
-
-var moods: [String] {
-    ["Amazing", "Good", "Fine", "Not good", "Terrible"]
+enum Mood: String, CaseIterable, Identifiable {
+    case amazing, good, fine, terrible
+    var id: Self { self }
 }

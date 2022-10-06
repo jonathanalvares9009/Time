@@ -38,7 +38,7 @@ struct DetailView: View {
                 HStack {
                     Label("My Mood", systemImage: "face.smiling")
                     Spacer()
-                    Text("\(today.mood)")
+                    Text("\(today.mood.rawValue.capitalized)")
                 }
                 .accessibilityElement(children: .combine)
                 Label("\(today.note)", systemImage: "note")
