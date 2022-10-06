@@ -14,7 +14,8 @@ struct DetailView: View {
     var body: some View {
         List {
             Section(header: Text("Time Spent On")) {
-                NavigationLink(destination: DayView(values: today.values, categories: today.categories)) {
+                NavigationLink(destination: DayView(values: today.values, categories: today.categories, totalHours: today.totalHours
+                    )) {
                     Label("Graphical Representation", systemImage: "chart.pie")
                         .font(.headline)
                         .foregroundColor(.accentColor)

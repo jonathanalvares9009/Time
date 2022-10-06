@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-import SwiftPieChart
 
 struct DayView: View {
     var values: [Double]
     var categories: [String]
+    var totalHours: Int
     
     var body: some View {
         VStack {
@@ -21,6 +21,7 @@ struct DayView: View {
             PieChartView(
                 values: values,
                 names: categories,
+                totalHours: totalHours,
                 formatter: { val in
                     hoursInStringFormat(val: val)
                 },
@@ -35,7 +36,7 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        let timeSpentOn: timeSpent = hoursSpentOn(_categories: ["Rent", "Transport", "Education", "Computer"], _hoursSpent: [1, 2, 3, 4])
-        DayView(values: timeSpentOn.hoursSpent, categories: timeSpentOn.categories)
+        let timeSpentOn: timeSpent = hoursSpentOn(_categories: ["Rent", "Transport", "Education", "Computer"], _hoursSpent: [1, 2, 3, 4], totalHours: 10)
+        DayView(values: timeSpentOn.hoursSpent, categories: timeSpentOn.categories, totalHours: timeSpentOn.totalHours)
     }
 }

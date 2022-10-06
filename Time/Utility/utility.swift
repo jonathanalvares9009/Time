@@ -20,25 +20,16 @@ func hoursInStringFormat(val: Double) -> String {
 struct timeSpent {
     var categories: [String]
     var hoursSpent: [Double]
+    var totalHours: Int
 }
 
-func hoursSpentOn(_categories: [String], _hoursSpent: [Double]) -> timeSpent {
-    var timeSpentOn: timeSpent = timeSpent(categories: [], hoursSpent: [])
+func hoursSpentOn(_categories: [String], _hoursSpent: [Double], totalHours: Int) -> timeSpent {
+    var timeSpentOn: timeSpent = timeSpent(categories: [], hoursSpent: [], totalHours: 2)
     
-    let len: Int = _categories.count - 1
-    var sum: Double = 0
-    for idx in 0...len {
-        timeSpentOn.categories.append(_categories[idx])
-        timeSpentOn.hoursSpent.append(_hoursSpent[idx])
-        sum += _hoursSpent[idx]
-    }
+    timeSpentOn.totalHours = totalHours
+    timeSpentOn.categories = _categories
+    timeSpentOn.hoursSpent = _hoursSpent
 
-    if sum < 24 {
-        let freeTime = 24 - sum
-        timeSpentOn.categories.append("Free")
-        timeSpentOn.hoursSpent.append(freeTime)
-    }
-    
     return timeSpentOn
 }
 

@@ -78,8 +78,8 @@ extension Today {
 extension Today {
     static let sampleData: [Today] =
     [
-        Today(mood: "Happy", note: "I love Goa", values: [1, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 5),
-        Today(mood: "Happy", note: "I love Goa", values: [1, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 8),
-        Today(mood: "Happy", note: "I love Goa", values: [1, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 12)
+        Today(mood: "Happy", note: "I love Goa", values: [1, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 10),
+        Today(mood: "Happy", note: "I love Goa", values: [6, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 15),
+        Today(mood: "Happy", note: "I love Goa", values: [1, 5, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 13)
     ]
 }

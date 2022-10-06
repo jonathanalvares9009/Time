@@ -11,6 +11,8 @@
 		035E372528EDBA9500310CB5 /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E372428EDBA9500310CB5 /* utility.swift */; };
 		035E372728EDBAC900310CB5 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E372628EDBAC900310CB5 /* ColorPicker.swift */; };
 		035E372A28EDBBA400310CB5 /* SwiftPieChart in Frameworks */ = {isa = PBXBuildFile; productRef = 035E372928EDBBA400310CB5 /* SwiftPieChart */; };
+		03F30B1528EE99CF0016F8CE /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F30B1428EE99CF0016F8CE /* PieChartView.swift */; };
+		03F30B1728EE9A3A0016F8CE /* PieSliceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F30B1628EE9A3A0016F8CE /* PieSliceView.swift */; };
 		7CB413DF26EA824100544BA7 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB413DE26EA824100544BA7 /* Time.swift */; };
 		7CB413E326EA824300544BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB413E226EA824300544BA7 /* Assets.xcassets */; };
 		7CB413E626EA824300544BA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CB413E526EA824300544BA7 /* Preview Assets.xcassets */; };
@@ -27,6 +29,8 @@
 		035E371D28EDBA2300310CB5 /* DayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		035E372428EDBA9500310CB5 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
 		035E372628EDBAC900310CB5 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		03F30B1428EE99CF0016F8CE /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		03F30B1628EE9A3A0016F8CE /* PieSliceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSliceView.swift; sourceTree = "<group>"; };
 		7CB413DB26EA824100544BA7 /* Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Time.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB413DE26EA824100544BA7 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		7CB413E226EA824300544BA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +64,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		03F30B1328EE99AF0016F8CE /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				03F30B1428EE99CF0016F8CE /* PieChartView.swift */,
+				03F30B1628EE9A3A0016F8CE /* PieSliceView.swift */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
 		7CB413D226EA824100544BA7 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 		7CB413DD26EA824100544BA7 /* Time */ = {
 			isa = PBXGroup;
 			children = (
+				03F30B1328EE99AF0016F8CE /* PieChart */,
 				035E372328EDBA9500310CB5 /* Utility */,
 				035E371D28EDBA2300310CB5 /* DayView.swift */,
 				7CB413EF26EA97B300544BA7 /* Models */,
@@ -199,8 +213,10 @@
 			files = (
 				035E371F28EDBA2300310CB5 /* DayView.swift in Sources */,
 				7CB413F326EABF1D00544BA7 /* Today.swift in Sources */,
+				03F30B1728EE9A3A0016F8CE /* PieSliceView.swift in Sources */,
 				7CB413FB26EBAB0B00544BA7 /* DetailView.swift in Sources */,
 				7CB413FD26EBD16900544BA7 /* DetailEditView.swift in Sources */,
+				03F30B1528EE99CF0016F8CE /* PieChartView.swift in Sources */,
 				035E372728EDBAC900310CB5 /* ColorPicker.swift in Sources */,
 				7CB413F126EA97C500544BA7 /* Theme.swift in Sources */,
 				035E372528EDBA9500310CB5 /* utility.swift in Sources */,
