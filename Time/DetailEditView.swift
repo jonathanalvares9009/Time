@@ -6,47 +6,56 @@ import SwiftUI
 
 struct DetailEditView: View {
     @Binding var data: Today.Data
-    @State private var newAttendeeName = ""
+    @State private var newCategoryName = ""
+    @State private var newCategoryValue = ""
     
     var body: some View {
-//        Form {
-//            Section(header: Text("Meeting Info")) {
-//                TextField("Title", text: $data.title)
-//                HStack {
-//                    Slider(value: $data.lengthInMinutes, in: 5...30, step: 1) {
-//                        Text("Length")
-//                    }
-//                    .accessibilityValue("\(Int(data.lengthInMinutes)) minutes")
-//                    Spacer()
-//                    Text("\(Int(data.lengthInMinutes)) minutes")
-//                        .accessibilityHidden(true)
-//                }
-//                ThemePicker(selection: $data.theme)
-//            }
-//            Section(header: Text("Attendees")) {
-//                ForEach(data.attendees) { attendee in
-//                    Text(attendee.name)
-//                }
-//                .onDelete { indices in
-//                    data.attendees.remove(atOffsets: indices)
-//                }
-//                HStack {
-//                    TextField("New Attendee", text: $newAttendeeName)
-//                    Button(action: {
-//                        withAnimation {
-//                            let attendee = Today.Attendee(name: newAttendeeName)
-//                            data.attendees.append(attendee)
-//                            newAttendeeName = ""
-//                        }
-//                    }) {
-//                        Image(systemName: "plus.circle.fill")
-//                            .accessibilityLabel("Add attendee")
-//                    }
-//                    .disabled(newAttendeeName.isEmpty)
-//                }
-//            }
-//        }
-        Text("Hello")
+        Form {
+            Section(header: Text("Note for future me")) {
+                TextField("Write a note", text: $data.note)
+            }
+            Section(header: Text("Categories ")) {
+                ForEach(data.categories, id: \.self) { category in
+                    Text(category)
+                }.onDelete { indices in
+                    data.categories.remove(atOffsets: indices)
+                }
+                HStack {
+                    TextField("New Category", text: $newCategoryName)
+                    Button(action: {
+                        withAnimation {
+                            let category = newCategoryName
+                            data.categories.append(category)
+                            newCategoryName = ""
+                        }
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                    }
+                    .disabled(newCategoryName.isEmpty)
+                }
+            }
+            Section(header: Text("Time spent on categories")) {
+                ForEach(data.values, id: \.self) { value in
+                    Text("\(hoursInStringFormat(val: value))")
+                }.onDelete { indices in
+                    data.values.remove(atOffsets: indices)
+                }
+                HStack {
+                    TextField("1", text: $newCategoryValue)
+                    Button(action: {
+                        withAnimation {
+                            let value = Double(newCategoryValue)
+                            data.values.append(value ?? 0)
+//                            data.totalHours += Int(newCategoryValue) ?? 0
+                            newCategoryValue = ""
+                        }
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                    }
+                    .disabled(newCategoryValue.isEmpty)
+                }
+            }
+        }
     }
 }
 

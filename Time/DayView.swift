@@ -10,7 +10,7 @@ import SwiftUI
 struct DayView: View {
     var values: [Double]
     var categories: [String]
-    var totalHours: Int
+    var totalHours: Double
     
     var body: some View {
         VStack {

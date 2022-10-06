@@ -13,9 +13,9 @@ struct Today: Identifiable, Codable {
     var values: [Double]
     var categories: [String]
     var theme: Theme
-    var totalHours: Int = 2
+    var totalHours: Double = 2
     
-    init(id: UUID = UUID(), date: Date = Date(), mood: String, note: String, values: [Double], categories: [String], theme: Theme = .lavender, totalHours: Int) {
+    init(id: UUID = UUID(), date: Date = Date(), mood: String, note: String, values: [Double], categories: [String], theme: Theme = .lavender, totalHours: Double) {
         self.id = id
         self.date = date
         self.mood = mood
@@ -47,7 +47,7 @@ extension Today {
         var values: [Double] = []
         var categories: [String] = []
         var theme: Theme = .seafoam
-        var totalHours: Int = 2
+        var totalHours: Double = 2
     }
     
     var data: Data {
@@ -60,7 +60,10 @@ extension Today {
         values = data.values
         categories = data.categories
         theme = data.theme
-        totalHours = data.totalHours
+        totalHours = 0
+        for value in values {
+            totalHours += value
+        }
     }
     
     init(data: Data) {

@@ -20,10 +20,10 @@ func hoursInStringFormat(val: Double) -> String {
 struct timeSpent {
     var categories: [String]
     var hoursSpent: [Double]
-    var totalHours: Int
+    var totalHours: Double
 }
 
-func hoursSpentOn(_categories: [String], _hoursSpent: [Double], totalHours: Int) -> timeSpent {
+func hoursSpentOn(_categories: [String], _hoursSpent: [Double], totalHours: Double) -> timeSpent {
     var timeSpentOn: timeSpent = timeSpent(categories: [], hoursSpent: [], totalHours: 2)
     
     timeSpentOn.totalHours = totalHours

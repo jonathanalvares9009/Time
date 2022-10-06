@@ -5,8 +5,8 @@ See LICENSE folder for this sample’s licensing information.
 import SwiftUI
 
 struct DetailView: View {
-    var today: Today
-    let totalHoursInADay: Int = 24
+    @Binding var today: Today
+    let totalHoursInADay: Double = 24
     
     @State private var data = Today.Data()
     @State private var isPresentingEditView = false
@@ -23,13 +23,13 @@ struct DetailView: View {
                 HStack {
                     Label("Productive Time", systemImage: "clock")
                     Spacer()
-                    Text("\(today.totalHours) hours")
+                    Text("\(Int(today.totalHours)) hours")
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
                     Label("Free Time", systemImage: "clock")
                     Spacer()
-                    Text("\(totalHoursInADay - today.totalHours) hours")
+                    Text("\(Int(totalHoursInADay - today.totalHours)) hours")
                 }
                 .accessibilityElement(children: .combine)
             }
@@ -48,13 +48,13 @@ struct DetailView: View {
         .toolbar {
             Button("Edit") {
                 isPresentingEditView = true
-//                data = scrum.data
+                data = today.data
             }
         }
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
                 DetailEditView(data: $data)
-                    .navigationTitle(today.mood)
+                    .navigationTitle(today.formattedDate)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
@@ -64,7 +64,7 @@ struct DetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
                                 isPresentingEditView = false
-//                                scrum.update(from: data)
+                                today.update(from: data)
                             }
                         }
                     }
@@ -76,7 +76,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(today: Today.sampleData[0])
+            DetailView(today: .constant(Today.sampleData[0]))
         }
     }
 }

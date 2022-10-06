@@ -17,7 +17,7 @@ struct CardView: View {
                 Label("\(today.mood)", systemImage: "face.smiling")
                     .accessibilityLabel("Mood today")
                 Spacer()
-                Label("\(today.totalHours) hours", systemImage: "clock")
+                Label("\(Int(today.totalHours)) hours", systemImage: "clock")
                     .accessibilityLabel("Time spent doing something")
             }
             .font(.caption)
