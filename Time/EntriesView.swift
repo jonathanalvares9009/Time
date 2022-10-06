@@ -10,7 +10,7 @@ struct EntriesView: View {
     var body: some View {
         List {
             ForEach(entries) { entry in
-                NavigationLink(destination: DetailView(scrum: entry)) {
+                NavigationLink(destination: DetailView(today: entry)) {
                     CardView(today: entry)
                 }
                 .listRowBackground(entry.theme.mainColor)
