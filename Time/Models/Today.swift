@@ -15,14 +15,14 @@ struct Today: Identifiable {
     var theme: Theme
     var totalHours: Double = 2
     
-    init(id: UUID = UUID(), date: Date = Date(), mood: Mood, note: String, values: [Double], categories: [String], theme: Theme = .lavender, totalHours: Double) {
+    init(id: UUID = UUID(), date: Date = Date(), mood: Mood, note: String, values: [Double], categories: [String], theme: Theme = Mood.amazing.themeColor, totalHours: Double) {
         self.id = id
         self.date = date
         self.mood = mood
         self.note = note
         self.values = values
         self.categories = categories
-        self.theme = theme
+        self.theme = mood.themeColor
         self.formattedDate = getFormattedDate(date: self.date)
         self.totalHours = totalHours
     }
@@ -59,7 +59,7 @@ extension Today {
         note = data.note
         values = data.values
         categories = data.categories
-        theme = data.theme
+        theme = data.mood.themeColor
         totalHours = 0
         for value in values {
             totalHours += value
