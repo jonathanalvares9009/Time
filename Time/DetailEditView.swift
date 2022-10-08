@@ -23,7 +23,7 @@ struct DetailEditView: View {
             }
             Section(header: Text("Categories ")) {
                 ForEach(data.categories) { category in
-                    Text(category.rawValue)
+                    Text(category.name)
                 }.onDelete { indices in
                     data.categories.remove(atOffsets: indices)
                 }

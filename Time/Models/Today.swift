@@ -87,12 +87,7 @@ extension Today {
 }
 
 extension Today {
-    static let sampleData: [Today] =
-    [
-        Today(mood: Mood.amazing, note: "I love Goa", values: [1, 2, 3], categories: [Category.sleep, Category.play, Category.mobile], totalHours: 10),
-        Today(mood: Mood.good, note: "I love Goa", values: [6, 2, 3], categories: [Category.sleep, Category.play, Category.mobile], totalHours: 15),
-        Today(mood: Mood.fine, note: "I love Goa", values: [1, 5, 3], categories: [Category.sleep, Category.play, Category.mobile], totalHours: 13)
-    ]
+    static let sampleData: [Today] = []
 }
 
 extension Double: Identifiable {
