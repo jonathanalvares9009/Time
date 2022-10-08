@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Mood: String, CaseIterable, Identifiable {
+enum Mood: String, CaseIterable, Identifiable, Codable {
     case amazing, good, fine, terrible
     var id: Self { self }
     var themeColor: Theme {

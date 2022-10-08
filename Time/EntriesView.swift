@@ -6,8 +6,10 @@ import SwiftUI
 
 struct EntriesView: View {
     @Binding var entries: [Entry]
+    @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingNewEntryView = false
     @State private var newEntryData = Entry.Data()
+    let saveAction: ()->Void
     
     var body: some View {
         List {
@@ -47,6 +49,8 @@ struct EntriesView: View {
                     }
                 }
             }
+        }.onChange(of: scenePhase) { phase in
+            if phase == .inactive { saveAction() }
         }
     }
 }
@@ -54,7 +58,7 @@ struct EntriesView: View {
 struct ScrumsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EntriesView(entries: .constant(Entry.sampleData))
+            EntriesView(entries: .constant(Entry.sampleData), saveAction: {})
         }
     }
 }

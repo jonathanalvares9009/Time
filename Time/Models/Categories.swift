@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Category: String, CaseIterable, Identifiable {
+enum Category: String, CaseIterable, Identifiable, Codable {
     case study, hobby, work, college, family, random, vacation, play, mobile, sleep, free_time
     var id: Self { self }
     var name: String {

@@ -4,7 +4,7 @@ See LICENSE folder for this sample’s licensing information.
 
 import Foundation
 
-struct Entry: Identifiable {
+struct Entry: Identifiable, Codable {
     let id: UUID
     let date: Date
     var formattedDate: String = ""

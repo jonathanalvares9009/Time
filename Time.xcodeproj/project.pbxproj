@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030DFE3A28F1A9810000AFB2 /* EntriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030DFE3928F1A9810000AFB2 /* EntriesStore.swift */; };
 		033DCB2D28F12B600012C0B8 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DCB2C28F12B600012C0B8 /* Categories.swift */; };
 		035E371F28EDBA2300310CB5 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E371D28EDBA2300310CB5 /* DayView.swift */; };
 		035E372528EDBA9500310CB5 /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E372428EDBA9500310CB5 /* utility.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030DFE3928F1A9810000AFB2 /* EntriesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesStore.swift; sourceTree = "<group>"; };
 		033DCB2C28F12B600012C0B8 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		035E371D28EDBA2300310CB5 /* DayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		035E372428EDBA9500310CB5 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				7CB413F226EABF1D00544BA7 /* Entry.swift */,
 				7CB413F026EA97C500544BA7 /* Theme.swift */,
 				039D280128EED0680012DE7A /* Mood.swift */,
+				030DFE3928F1A9810000AFB2 /* EntriesStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				035E372728EDBAC900310CB5 /* ColorPicker.swift in Sources */,
 				7CB413F126EA97C500544BA7 /* Theme.swift in Sources */,
 				033DCB2D28F12B600012C0B8 /* Categories.swift in Sources */,
+				030DFE3A28F1A9810000AFB2 /* EntriesStore.swift in Sources */,
 				035E372528EDBA9500310CB5 /* utility.swift in Sources */,
 				7CB413F926EB9A1A00544BA7 /* EntriesView.swift in Sources */,
 				7CB413DF26EA824100544BA7 /* Time.swift in Sources */,
