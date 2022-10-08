@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033DCB2D28F12B600012C0B8 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DCB2C28F12B600012C0B8 /* Categories.swift */; };
 		035E371F28EDBA2300310CB5 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E371D28EDBA2300310CB5 /* DayView.swift */; };
 		035E372528EDBA9500310CB5 /* utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E372428EDBA9500310CB5 /* utility.swift */; };
 		035E372728EDBAC900310CB5 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E372628EDBAC900310CB5 /* ColorPicker.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		033DCB2C28F12B600012C0B8 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		035E371D28EDBA2300310CB5 /* DayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		035E372428EDBA9500310CB5 /* utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utility.swift; sourceTree = "<group>"; };
 		035E372628EDBAC900310CB5 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		7CB413EF26EA97B300544BA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				033DCB2C28F12B600012C0B8 /* Categories.swift */,
 				035E372628EDBAC900310CB5 /* ColorPicker.swift */,
 				7CB413F226EABF1D00544BA7 /* Today.swift */,
 				7CB413F026EA97C500544BA7 /* Theme.swift */,
@@ -223,6 +226,7 @@
 				03F30B1528EE99CF0016F8CE /* PieChartView.swift in Sources */,
 				035E372728EDBAC900310CB5 /* ColorPicker.swift in Sources */,
 				7CB413F126EA97C500544BA7 /* Theme.swift in Sources */,
+				033DCB2D28F12B600012C0B8 /* Categories.swift in Sources */,
 				035E372528EDBA9500310CB5 /* utility.swift in Sources */,
 				7CB413F926EB9A1A00544BA7 /* EntriesView.swift in Sources */,
 				7CB413DF26EA824100544BA7 /* Time.swift in Sources */,

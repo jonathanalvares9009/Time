@@ -11,11 +11,11 @@ struct Today: Identifiable {
     var mood: Mood
     var note: String
     var values: [Double]
-    var categories: [String]
+    var categories: [Category]
     var theme: Theme
     var totalHours: Double = 2
     
-    init(id: UUID = UUID(), date: Date = Date(), mood: Mood, note: String, values: [Double], categories: [String], theme: Theme = Mood.amazing.themeColor, totalHours: Double) {
+    init(id: UUID = UUID(), date: Date = Date(), mood: Mood, note: String, values: [Double], categories: [Category], theme: Theme = Mood.amazing.themeColor, totalHours: Double) {
         self.id = id
         self.date = date
         self.mood = mood
@@ -48,7 +48,7 @@ extension Today {
         var mood: Mood = Mood.amazing
         var note: String = ""
         var values: [Double] = []
-        var categories: [String] = []
+        var categories: [Category] = []
         var theme: Theme = Mood.amazing.themeColor
         var totalHours: Double = 0
     }
@@ -89,8 +89,8 @@ extension Today {
 extension Today {
     static let sampleData: [Today] =
     [
-        Today(mood: Mood.amazing, note: "I love Goa", values: [1, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 10),
-        Today(mood: Mood.good, note: "I love Goa", values: [6, 2, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 15),
-        Today(mood: Mood.fine, note: "I love Goa", values: [1, 5, 3, 4], categories: ["Sleep", "Play", "Mobile", "Random"], totalHours: 13)
+        Today(mood: Mood.amazing, note: "I love Goa", values: [1, 2, 3, 4], categories: [Category.sleep, Category.play, Category.mobile, Category.mobile], totalHours: 10),
+        Today(mood: Mood.good, note: "I love Goa", values: [6, 2, 3, 4], categories: [Category.sleep, Category.play, Category.mobile, Category.mobile], totalHours: 15),
+        Today(mood: Mood.fine, note: "I love Goa", values: [1, 5, 3, 4], categories: [Category.sleep, Category.play, Category.mobile, Category.mobile], totalHours: 13)
     ]
 }

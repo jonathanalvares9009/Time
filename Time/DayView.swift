@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DayView: View {
     var values: [Double]
-    var categories: [String]
+    var categories: [Category]
     var totalHours: Double
     
     var body: some View {
@@ -20,7 +20,7 @@ struct DayView: View {
                 .foregroundColor(.white)
             PieChartView(
                 values: values,
-                names: categories,
+                names: getCategoryInStringFormat(_categories: categories),
                 totalHours: totalHours,
                 formatter: { val in
                     hoursInStringFormat(val: val)
@@ -36,7 +36,7 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        let timeSpentOn: timeSpent = hoursSpentOn(_categories: ["Rent", "Transport", "Education", "Computer"], _hoursSpent: [1, 2, 3, 4], totalHours: 10)
+        let timeSpentOn: timeSpent = hoursSpentOn(_categories: [Category.mobile, Category.family, Category.sleep, Category.college], _hoursSpent: [1, 2, 3, 4], totalHours: 10)
         DayView(values: timeSpentOn.hoursSpent, categories: timeSpentOn.categories, totalHours: timeSpentOn.totalHours)
     }
 }

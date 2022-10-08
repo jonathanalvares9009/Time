@@ -6,7 +6,7 @@ import SwiftUI
 
 struct DetailEditView: View {
     @Binding var data: Today.Data
-    @State private var newCategoryName = ""
+    @State private var newCategoryName = Category.random
     @State private var newCategoryValue = ""
     
     var body: some View {
@@ -23,22 +23,30 @@ struct DetailEditView: View {
             }
             Section(header: Text("Categories ")) {
                 ForEach(data.categories, id: \.self) { category in
-                    Text(category)
+                    Text(category.rawValue)
                 }.onDelete { indices in
                     data.categories.remove(atOffsets: indices)
                 }
                 HStack {
-                    TextField("New Category", text: $newCategoryName)
-                    Button(action: {
-                        withAnimation {
-                            let category = newCategoryName
-                            data.categories.append(category)
-                            newCategoryName = ""
-                        }
-                    }) {
-                        Image(systemName: "plus.circle.fill")
-                    }
-                    .disabled(newCategoryName.isEmpty)
+//                    TextField("New Category", text: $newCategoryName)
+////                    Picker("Category", selection: $newCategoryName) {
+////                        ForEach(Category.allCases) { category in
+////                            Text(category.name).tag(category)
+////                        }
+////                    }
+////                    .onReceive([self.newCategoryName].publisher.first()) { value in
+////                                print(value)
+////                     }
+//                    Button(action: {
+//                        withAnimation {
+//                            let category = newCategoryName
+//                            data.categories.append(category)
+//                            newCategoryName = ""
+//                        }
+//                    }) {
+//                        Image(systemName: "plus.circle.fill")
+//                    }
+//                    .disabled(newCategoryName.isEmpty)
                 }
             }
             Section(header: Text("Time spent on categories")) {
