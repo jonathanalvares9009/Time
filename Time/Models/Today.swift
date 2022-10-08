@@ -41,7 +41,7 @@ struct Today: Identifiable {
 }
 
 extension Today {
-    struct Data {
+    struct Data: Identifiable {
         let id: UUID = UUID()
         let date: Date = Date()
         var formattedDate: String = ""
@@ -89,8 +89,14 @@ extension Today {
 extension Today {
     static let sampleData: [Today] =
     [
-        Today(mood: Mood.amazing, note: "I love Goa", values: [1, 2, 3, 4], categories: [Category.sleep, Category.play, Category.mobile, Category.mobile], totalHours: 10),
-        Today(mood: Mood.good, note: "I love Goa", values: [6, 2, 3, 4], categories: [Category.sleep, Category.play, Category.mobile, Category.mobile], totalHours: 15),
-        Today(mood: Mood.fine, note: "I love Goa", values: [1, 5, 3, 4], categories: [Category.sleep, Category.play, Category.mobile, Category.mobile], totalHours: 13)
+        Today(mood: Mood.amazing, note: "I love Goa", values: [1, 2, 3], categories: [Category.sleep, Category.play, Category.mobile], totalHours: 10),
+        Today(mood: Mood.good, note: "I love Goa", values: [6, 2, 3], categories: [Category.sleep, Category.play, Category.mobile], totalHours: 15),
+        Today(mood: Mood.fine, note: "I love Goa", values: [1, 5, 3], categories: [Category.sleep, Category.play, Category.mobile], totalHours: 13)
     ]
+}
+
+extension Double: Identifiable {
+    public var id: UUID {
+        UUID()
+    }
 }

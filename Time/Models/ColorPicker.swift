@@ -17,10 +17,10 @@ var colors: [Color] = [
     Color.purple
 ]
 
-func colorsPicker(numOfCategories: Int) -> [Color] {
+func colorsPicker(categories: [Category]) -> [Color] {
     var colorsPicked: [Color] = []
-    for idx in 0...numOfCategories {
-        colorsPicked.append(colors[idx])
+    for idx in 0...categories.count-1 {
+        colorsPicked.append(categories[idx].color)
     }
     return colorsPicked
 }

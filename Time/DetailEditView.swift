@@ -22,35 +22,27 @@ struct DetailEditView: View {
                 TextField("Write a note", text: $data.note)
             }
             Section(header: Text("Categories ")) {
-                ForEach(data.categories, id: \.self) { category in
+                ForEach(data.categories) { category in
                     Text(category.rawValue)
                 }.onDelete { indices in
                     data.categories.remove(atOffsets: indices)
                 }
                 HStack {
-//                    TextField("New Category", text: $newCategoryName)
-////                    Picker("Category", selection: $newCategoryName) {
-////                        ForEach(Category.allCases) { category in
-////                            Text(category.name).tag(category)
-////                        }
-////                    }
-////                    .onReceive([self.newCategoryName].publisher.first()) { value in
-////                                print(value)
-////                     }
-//                    Button(action: {
-//                        withAnimation {
-//                            let category = newCategoryName
-//                            data.categories.append(category)
-//                            newCategoryName = ""
-//                        }
-//                    }) {
-//                        Image(systemName: "plus.circle.fill")
-//                    }
-//                    .disabled(newCategoryName.isEmpty)
+                    Picker("Category", selection: $newCategoryName) {
+                        ForEach(Category.allCases) { category in
+                            if category != Category.free_time {
+                                Text(category.name).tag(category)
+                            }
+                        }
+                    }
+                    .onChange(of: newCategoryName) { tag in
+                        let category = newCategoryName
+                        data.categories.append(category)
+                    }
                 }
             }
             Section(header: Text("Time spent on categories")) {
-                ForEach(data.values, id: \.self) { value in
+                ForEach(data.values) { value in
                     Text("\(hoursInStringFormat(val: value))")
                 }.onDelete { indices in
                     data.values.remove(atOffsets: indices)

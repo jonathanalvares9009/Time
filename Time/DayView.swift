@@ -25,7 +25,7 @@ struct DayView: View {
                 formatter: { val in
                     hoursInStringFormat(val: val)
                 },
-                colors: colorsPicker(numOfCategories: values.count)
+                colors: colorsPicker(categories: categories)
             )
             .padding(7.0)
         }
