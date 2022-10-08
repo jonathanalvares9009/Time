@@ -23,7 +23,19 @@ struct DetailEditView: View {
             }
             Section(header: Text("Categories ")) {
                 ForEach(data.categories) { category in
-                    Text(category.name)
+                    HStack {
+                        Text(category.name)
+                        Spacer()
+                        Button(action: {
+                            withAnimation {
+                                if let index = data.categories.firstIndex(of: category) {
+                                    data.categories.remove(at: index)
+                                }
+                            }
+                        }) {
+                            Image(systemName: "minus.circle.fill")
+                        }
+                    }
                 }.onDelete { indices in
                     data.categories.remove(atOffsets: indices)
                 }
@@ -43,7 +55,19 @@ struct DetailEditView: View {
             }
             Section(header: Text("Time spent on categories")) {
                 ForEach(data.values) { value in
-                    Text("\(hoursInStringFormat(val: value))")
+                    HStack{
+                        Text("\(hoursInStringFormat(val: value))")
+                        Spacer()
+                        Button(action: {
+                            withAnimation {
+                                if let index = data.values.firstIndex(of: value) {
+                                    data.values.remove(at: index)
+                                }
+                            }
+                        }) {
+                            Image(systemName: "minus.circle.fill")
+                        }
+                    }
                 }.onDelete { indices in
                     data.values.remove(atOffsets: indices)
                 }
