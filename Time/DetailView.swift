@@ -5,10 +5,10 @@ See LICENSE folder for this sample’s licensing information.
 import SwiftUI
 
 struct DetailView: View {
-    @Binding var today: Today
+    @Binding var today: Entry
     let totalHoursInADay: Double = 24
     
-    @State private var data = Today.Data()
+    @State private var data = Entry.Data()
     @State private var isPresentingEditView = false
     
     var body: some View {
@@ -76,7 +76,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(today: .constant(Today.sampleData[0]))
+            DetailView(today: .constant(Entry.sampleData[0]))
         }
     }
 }

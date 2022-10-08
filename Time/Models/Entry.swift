@@ -4,7 +4,7 @@ See LICENSE folder for this sample’s licensing information.
 
 import Foundation
 
-struct Today: Identifiable {
+struct Entry: Identifiable {
     let id: UUID
     let date: Date
     var formattedDate: String = ""
@@ -40,7 +40,7 @@ struct Today: Identifiable {
     }
 }
 
-extension Today {
+extension Entry {
     struct Data: Identifiable {
         let id: UUID = UUID()
         let date: Date = Date()
@@ -86,8 +86,8 @@ extension Today {
     }
 }
 
-extension Today {
-    static let sampleData: [Today] = []
+extension Entry {
+    static let sampleData: [Entry] = []
 }
 
 extension Double: Identifiable {

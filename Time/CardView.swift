@@ -5,7 +5,7 @@ See LICENSE folder for this sample’s licensing information.
 import SwiftUI
 
 struct CardView: View {
-    let today: Today
+    let today: Entry
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -28,7 +28,7 @@ struct CardView: View {
 }
 
 struct CardView_Previews: PreviewProvider {
-    static var today = Today.sampleData[0]
+    static var today = Entry.sampleData[0]
     static var previews: some View {
         CardView(today: today)
             .background(today.theme.mainColor)

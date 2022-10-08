@@ -6,7 +6,7 @@ import SwiftUI
 
 @main
 struct Time: App {
-    @State private var entries = Today.sampleData
+    @State private var entries = Entry.sampleData
     
     var body: some Scene {
         WindowGroup {

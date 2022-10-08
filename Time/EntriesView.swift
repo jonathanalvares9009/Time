@@ -5,9 +5,9 @@ See LICENSE folder for this sample’s licensing information.
 import SwiftUI
 
 struct EntriesView: View {
-    @Binding var entries: [Today]
+    @Binding var entries: [Entry]
     @State private var isPresentingNewEntryView = false
-    @State private var newEntryData = Today.Data()
+    @State private var newEntryData = Entry.Data()
     
     var body: some View {
         List {
@@ -34,15 +34,15 @@ struct EntriesView: View {
                     ToolbarItem(placement: .cancellationAction) {
                         Button("Dismiss") {
                             isPresentingNewEntryView = false
-                            newEntryData = Today.Data()
+                            newEntryData = Entry.Data()
                         }
                     }
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Add") {
-                            let newEntry = Today(data: newEntryData)
+                            let newEntry = Entry(data: newEntryData)
                             entries.append(newEntry)
                             isPresentingNewEntryView = false
-                            newEntryData = Today.Data()
+                            newEntryData = Entry.Data()
                         }
                     }
                 }
@@ -54,7 +54,7 @@ struct EntriesView: View {
 struct ScrumsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EntriesView(entries: .constant(Today.sampleData))
+            EntriesView(entries: .constant(Entry.sampleData))
         }
     }
 }

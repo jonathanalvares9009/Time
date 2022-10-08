@@ -5,7 +5,7 @@ See LICENSE folder for this sample’s licensing information.
 import SwiftUI
 
 struct DetailEditView: View {
-    @Binding var data: Today.Data
+    @Binding var data: Entry.Data
     @State private var newCategoryName = Category.random
     @State private var newCategoryValue = ""
     
@@ -91,6 +91,6 @@ struct DetailEditView: View {
 
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailEditView(data: .constant(Today.sampleData[0].data))
+        DetailEditView(data: .constant(Entry.sampleData[0].data))
     }
 }
