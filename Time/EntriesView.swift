@@ -6,6 +6,8 @@ import SwiftUI
 
 struct EntriesView: View {
     @Binding var entries: [Today]
+    @State private var isPresentingNewEntryView = false
+    @State private var newEntryData = Today.Data()
     
     var body: some View {
         List {
@@ -18,10 +20,33 @@ struct EntriesView: View {
         }
         .navigationTitle("Entries")
         .toolbar {
-            Button(action: {print("Button Clicked")}) {
+            Button(action: {
+                isPresentingNewEntryView = true
+            }) {
                 Image(systemName: "plus")
             }
             .accessibilityLabel("Add New Entry")
+        }
+        .sheet(isPresented: $isPresentingNewEntryView) {
+            NavigationView {
+                DetailEditView(data: $newEntryData)
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Dismiss") {
+                            isPresentingNewEntryView = false
+                            newEntryData = Today.Data()
+                        }
+                    }
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Add") {
+                            let newEntry = Today(data: newEntryData)
+                            entries.append(newEntry)
+                            isPresentingNewEntryView = false
+                            newEntryData = Today.Data()
+                        }
+                    }
+                }
+            }
         }
     }
 }

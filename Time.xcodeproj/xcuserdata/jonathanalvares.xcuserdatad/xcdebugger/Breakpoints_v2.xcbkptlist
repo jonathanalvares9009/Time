@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E95174E4-5F66-4CB9-8DD1-E9D223E3D254"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Time/Time.swift"
@@ -36,11 +36,11 @@
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "E95174E4-5F66-4CB9-8DD1-E9D223E3D254 - c6707101e349646"
-                  shouldBeEnabled = "Yes"
+                  uuid = "E95174E4-5F66-4CB9-8DD1-E9D223E3D254 - b44e2dc985e54d51"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Time.Time.body.getter : some"
+                  symbolName = "closure #1 () -&gt; SwiftUI.NavigationView&lt;Time.EntriesView&gt; in Time.Time.body.getter : some"
                   moduleName = "Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jonathanalvares/Desktop/Time/Time/Time.swift"
@@ -48,14 +48,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "213">
+                  offsetFromSymbolStart = "292">
                </Location>
                <Location
-                  uuid = "E95174E4-5F66-4CB9-8DD1-E9D223E3D254 - 661c493535aee0c2"
-                  shouldBeEnabled = "Yes"
+                  uuid = "E95174E4-5F66-4CB9-8DD1-E9D223E3D254 - 8ad4d6cd29bc7b89"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0, &#x3c4;_0_1 where &#x3c4;_1_0: Swift.Identifiable, &#x3c4;_1_1: SwiftUI.View&gt;(item: SwiftUI.Binding&lt;Swift.Optional&lt;&#x3c4;_1_0&gt;&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: (&#x3c4;_1_0) -&gt; &#x3c4;_1_1) -&gt; some&gt;&gt;.0 in Time.Time.body.getter : some"
+                  symbolName = "closure #1 () -&gt; Time.EntriesView in closure #1 () -&gt; SwiftUI.NavigationView&lt;Time.EntriesView&gt; in Time.Time.body.getter : some"
                   moduleName = "Time"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jonathanalvares/Desktop/Time/Time/Time.swift"
@@ -63,7 +63,115 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
-                  offsetFromSymbolStart = "549">
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40AF2ABC-816F-426B-A712-7DB5EE6A4935"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Time/EntriesView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "40AF2ABC-816F-426B-A712-7DB5EE6A4935 - 9c70ae8388d66d0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.Binding&lt;Swift.Array&lt;Time.Today&gt;&gt;, Foundation.UUID, &lt;&lt;opaque return type of SwiftUI.View.listRowBackground&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; some&gt;&gt;.0&gt; in Time.EntriesView.body.getter : some"
+                  moduleName = "Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathanalvares/Desktop/Time/Time/EntriesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "203">
+               </Location>
+               <Location
+                  uuid = "40AF2ABC-816F-426B-A712-7DB5EE6A4935 - 1a6073b1c0ce5884"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 (SwiftUI.Binding&lt;Time.Today&gt;) -&gt; &lt;&lt;opaque return type of SwiftUI.View.listRowBackground&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.Binding&lt;Swift.Array&lt;Time.Today&gt;&gt;, Foundation.UUID, &lt;&lt;opaque return type of SwiftUI.View.listRowBackground&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; some&gt;&gt;.0&gt; in Time.EntriesView.body.getter : some"
+                  moduleName = "Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathanalvares/Desktop/Time/Time/EntriesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "40AF2ABC-816F-426B-A712-7DB5EE6A4935 - f30d3aceebd5d9ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftUI.Binding&lt;Time.Today&gt;) -&gt; &lt;&lt;opaque return type of SwiftUI.View.listRowBackground&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; some&gt;&gt;.0 in implicit closure #1 (SwiftUI.Binding&lt;Time.Today&gt;) -&gt; &lt;&lt;opaque return type of SwiftUI.View.listRowBackground&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.Binding&lt;Swift.Array&lt;Time.Today&gt;&gt;, Foundation.UUID, &lt;&lt;opaque return type of SwiftUI.View.listRowBackground&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(Swift.Optional&lt;&#x3c4;_1_0&gt;) -&gt; some&gt;&gt;.0&gt; in Time.EntriesView.body.getter : some"
+                  moduleName = "Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathanalvares/Desktop/Time/Time/EntriesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "363">
+               </Location>
+               <Location
+                  uuid = "40AF2ABC-816F-426B-A712-7DB5EE6A4935 - ba17a679cd40af5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper init from projected value of $entry : SwiftUI.Binding&lt;Time.Today&gt;"
+                  moduleName = "Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathanalvares/Desktop/Time/Time/EntriesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  uuid = "40AF2ABC-816F-426B-A712-7DB5EE6A4935 - 6fd3fecd82ff941b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "$entry.getter : SwiftUI.Binding&lt;Time.Today&gt;"
+                  moduleName = "Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathanalvares/Desktop/Time/Time/EntriesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "40AF2ABC-816F-426B-A712-7DB5EE6A4935 - a8677576641568a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "entry.getter : Time.Today"
+                  moduleName = "Time"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jonathanalvares/Desktop/Time/Time/EntriesView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>

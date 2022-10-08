@@ -42,12 +42,15 @@ struct Today: Identifiable {
 
 extension Today {
     struct Data {
+        let id: UUID = UUID()
+        let date: Date = Date()
+        var formattedDate: String = ""
         var mood: Mood = Mood.amazing
         var note: String = ""
         var values: [Double] = []
         var categories: [String] = []
-        var theme: Theme = .seafoam
-        var totalHours: Double = 2
+        var theme: Theme = Mood.amazing.themeColor
+        var totalHours: Double = 0
     }
     
     var data: Data {
@@ -67,14 +70,19 @@ extension Today {
     }
     
     init(data: Data) {
-        id = UUID()
-        date = Date()
-        mood = data.mood
-        note = data.note
-        values = data.values
-        categories = data.categories
-        theme = data.theme
-        totalHours = data.totalHours
+        print(data)
+        self.id = data.id
+        self.date = data.date
+        self.mood = data.mood
+        self.note = data.note
+        self.values = data.values
+        self.categories = data.categories
+        self.theme = data.theme
+        self.formattedDate = getFormattedDate(date: data.date)
+        self.totalHours = 0
+        for value in self.values {
+            self.totalHours += value
+        }
     }
 }
 
