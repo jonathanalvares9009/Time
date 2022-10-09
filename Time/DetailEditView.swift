@@ -19,7 +19,13 @@ struct DetailEditView: View {
                 }
             }
             Section(header: Text("Note for future me")) {
-                TextField("Write a note", text: $data.note)
+                
+                if #available(iOS 16.0, *) {
+                    TextField("Write a note", text: $data.note, axis: .vertical)
+                } else {
+                    // Fallback on earlier versions
+                    TextField("Write a note", text: $data.note)
+                }
             }
             Section(header: Text("Categories ")) {
                 ForEach(data.categories) { category in
